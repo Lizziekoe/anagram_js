@@ -7,23 +7,6 @@ var anagram = function(baseWord, wordsToCheck) {
     var sortedWord = word.toLowerCase().split("").sort().join("");
     if (sortedWord === sortedBase) {
       matchingWords.push(word);
-    } else { //check for partial matches
-      var isMatch = true;
-      var lettersInBaseWord = sortedBase.split("");
-      var joinedBase = lettersInBaseWord.join("");
-      var lettersInSortedWord = sortedWord.split("");
-      lettersInSortedWord.forEach(function(letter) {
-        if (joinedBase.indexOf(letter) !== -1) { // if found
-          joinedBase = joinedBase.replace(letter, "");
-          debugger;
-        } else { // a letter is not found in the base word (so not an anagram)
-          isMatch = false;
-        }
-      });
-      if(isMatch) {
-        matchingWords.push(word);
-      }
-
     }
 
   });

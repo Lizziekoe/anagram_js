@@ -14,9 +14,11 @@ describe('anagram', function() {
   it("is case insensitive", function() {
     expect(anagram("YES", ["yes", "yES", "YES", "no"])).to.eql(["yes", "yES", "YES"]);
   });
-
   it("tells if baseword includes partial matches", function() {
-    expect(anagram("path", ["hat", "thap"])).to.eql(["hat", "thap"]);
+    expect(anagram("path", ["hat"])).to.eql(["hat"]);
+  });
+  it("tells if baseword includes partial matches, accounting for right number of letters", function() {
+    expect(anagram("at", ["aat"])).to.eql([]);
   });
 
 });
