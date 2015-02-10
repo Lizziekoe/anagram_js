@@ -9,22 +9,31 @@
     <title>Anagram</title>
   </head>
   <body>
-    <div class="container">
-      <form id="anagramForm">
-        <div class="form-group">
-          <label class="form-label" for="baseWord">Enter a word:</label>
-          <input class="form-control" type="text" name="baseWord" id="baseWord" autofocus>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="words">Enter words to be compared against above word:</label>
-          <input class="form-control" type="text" name="words" id="words" autofocus>
-        </div>
-        <button type="submit" class="btn btn-custom"><span class="glyphicon glyphicon-pushpin"></span> Go!</button>
-      </form>
+    <section class="header">
+      <h1>Anagram Fun</h1>
+    </section>
 
-      <div id="results">
-        <ul></ul>
-      </div>
+    <div class="container">
+
+      <section id="formSection">
+        <form id="anagramForm">
+          <div class="form-group">
+            <label class="form-label" for="baseWord">Enter a word:</label>
+            <input class="form-control" type="text" name="baseWord" id="baseWord" autofocus>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="words">Enter words to be compared against above word:</label>
+            <input class="form-control" type="text" name="words" id="words" autofocus>
+          </div>
+          <button type="submit" class="btn btn-custom"><span class="glyphicon glyphicon-pushpin"></span> Go!</button>
+        </form>
+      </section>
+
+      <section id="resultsSection">
+        <div id="results">
+          <ul></ul>
+        </div>
+      </section>
 
 
     </div>
